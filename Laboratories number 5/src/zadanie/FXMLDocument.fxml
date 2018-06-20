@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="619.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zadanie.FXMLDocumentController">
+   <children>
+      <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Program">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleButtonAction" text="Zamknij" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Budzik">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handle" text="Dodaj Budzik" />
+                  <MenuItem mnemonicParsing="false" onAction="#clearAction" text="Wyczyść alarmy" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" onAction="#clearAction" text="O mnie" />
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.6191117092866757" layoutY="25.0" prefHeight="376.0" prefWidth="467.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="349.0" prefWidth="294.0">
+               <children>
+                  <Canvas fx:id="canvas" height="349.0" width="266.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="592.0" prefWidth="188.0">
+               <children>
+                  <ListView fx:id="lisview" prefHeight="379.0" prefWidth="280.0">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#deleteAction" text="Usuń" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></ListView>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
